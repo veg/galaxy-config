@@ -1,0 +1,441 @@
+{
+    "a_galaxy_workflow": "true", 
+    "annotation": "", 
+    "format-version": "0.1", 
+    "name": "Simulation Example", 
+    "steps": {
+        "0": {
+            "annotation": "", 
+            "content_id": null, 
+            "errors": null, 
+            "id": 0, 
+            "input_connections": {}, 
+            "inputs": [], 
+            "label": "Input Sequence", 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 253.5, 
+                "top": 421
+            }, 
+            "tool_id": null, 
+            "tool_state": "{}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "3af8510c-be92-4644-bfde-a24b93e0e11a", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "output", 
+                    "uuid": "423029cc-43e7-4ad8-a178-1353dd14e171"
+                }
+            ]
+        }, 
+        "1": {
+            "annotation": "", 
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/iuc/art/art_illumina/2014.11.03.0", 
+            "errors": "Tool is not installed.", 
+            "id": 1, 
+            "input_connections": {
+                "input_seq_file": {
+                    "id": 0, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "testtoolshed.g2.bx.psu.edu/repos/iuc/art/art_illumina/2014.11.03.0", 
+            "outputs": [], 
+            "position": {
+                "left": 390, 
+                "top": 514
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionoutput_aln1_paired": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output_aln1_paired"
+                }, 
+                "HideDatasetActionoutput_aln1_single": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output_aln1_single"
+                }, 
+                "HideDatasetActionoutput_aln2_paired": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output_aln2_paired"
+                }, 
+                "HideDatasetActionoutput_fq1_paired": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output_fq1_paired"
+                }, 
+                "HideDatasetActionoutput_fq1_single": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output_fq1_single"
+                }, 
+                "HideDatasetActionoutput_fq2_paired": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output_fq2_paired"
+                }, 
+                "HideDatasetActionoutput_sam": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output_sam"
+                }
+            }, 
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/iuc/art/art_illumina/2014.11.03.0", 
+            "tool_state": "{\"aln\": \"false\", \"__page__\": null, \"sam\": \"false\", \"read_length\": \"150\", \"amplicon\": \"false\", \"__rerun_remap_job_id__\": null, \"insRate2\": \"0.00015\", \"delRate2\": \"0.00023\", \"rndSeed\": \"-1\", \"fold_coverage\": \"100\", \"delRate\": \"0.00011\", \"insRate\": \"9e-05\", \"generate\": {\"__current_case__\": 0, \"choice\": \"single_end\"}, \"input_seq_file\": {\"__class__\": \"RuntimeValue\"}}", 
+            "tool_version": "2014.11.03.0", 
+            "type": "tool", 
+            "uuid": "ef77bc81-7085-4104-b0eb-8febf51c4967", 
+            "workflow_outputs": []
+        }, 
+        "2": {
+            "annotation": "", 
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/veg/qfilt/qfilt/1.0.0", 
+            "errors": "Tool is not installed.", 
+            "id": 2, 
+            "input_connections": {
+                "input_fastq": {
+                    "id": 1, 
+                    "output_name": "output_fq1_single"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "testtoolshed.g2.bx.psu.edu/repos/veg/qfilt/qfilt/1.0.0", 
+            "outputs": [], 
+            "position": {
+                "left": 645, 
+                "top": 567
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionfiltered_output": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "filtered_output"
+                }
+            }, 
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/veg/qfilt/qfilt/1.0.0", 
+            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"options\": {\"qscore\": \"20\", \"format\": \"FASTA\", \"mismatch\": \"0\", \"length\": \"50\", \"remove\": \"\", \"replace\": \"\", \"prefix\": \"\", \"mode\": \"0\", \"__current_case__\": 1, \"tolerate_homopolymeric\": \"false\", \"tolerate_ambiguous\": \"false\", \"advanced\": \"advanced\", \"split\": \"\"}, \"input_fastq\": {\"__class__\": \"RuntimeValue\"}}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "uuid": "63b6a386-5a56-4e18-8083-a2ea6ee5e777", 
+            "workflow_outputs": []
+        }, 
+        "3": {
+            "annotation": "", 
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/rdvelazquez/savage/savage/0.4.0+galaxy0", 
+            "errors": "Tool is not installed.", 
+            "id": 3, 
+            "input_connections": {
+                "input_type|input": {
+                    "id": 1, 
+                    "output_name": "output_fq1_single"
+                }, 
+                "ref": {
+                    "id": 0, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": "Savage", 
+            "name": "testtoolshed.g2.bx.psu.edu/repos/rdvelazquez/savage/savage/0.4.0+galaxy0", 
+            "outputs": [], 
+            "position": {
+                "left": 1147, 
+                "top": 291
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/rdvelazquez/savage/savage/0.4.0+galaxy0", 
+            "tool_state": "{\"__page__\": null, \"input_type\": {\"singles\": \"single\", \"input\": {\"__class__\": \"RuntimeValue\"}, \"__current_case__\": 0}, \"__rerun_remap_job_id__\": null, \"revcomp\": \"false\", \"split\": \"1\", \"min_overlap_len\": \"\", \"ref\": {\"__class__\": \"RuntimeValue\"}, \"advanced\": {\"count_strains\": \"false\", \"ignore_subreads\": \"false\", \"min_clique_size\": \"\", \"contig_len_stage_c\": \"100\", \"no_stage_a\": \"false\", \"sfo_mm\": \"50\", \"no_stage_c\": \"false\", \"keep_branches\": \"false\", \"diploid_overlap_len\": \"\", \"average_read_len\": \"\", \"no_overlaps\": \"false\", \"merge_contigs\": \"0.0\", \"no_assembly\": \"false\", \"no_filtering\": \"false\", \"overlap_len_stage_c\": \"100\", \"diploid\": \"false\", \"diploid_contig_len\": \"\", \"max_tip_len\": \"100\", \"no_stage_b\": \"false\", \"no_preprocessing\": \"false\"}}", 
+            "tool_version": "0.4.0+galaxy0", 
+            "type": "tool", 
+            "uuid": "7f5e2732-ca44-4ab0-9fdf-cfa8d18a8fe8", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "contigs", 
+                    "uuid": "ffdaa81e-da69-41b4-b268-5b16eb5a268f"
+                }, 
+                {
+                    "label": null, 
+                    "output_name": "log", 
+                    "uuid": "9be3c3e7-0703-4340-8ef1-ea417fc885ef"
+                }
+            ]
+        }, 
+        "4": {
+            "annotation": "", 
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/rdvelazquez/bioext_bealign/bioext_bealign/0.18.6.0", 
+            "errors": "Tool is not installed.", 
+            "id": 4, 
+            "input_connections": {
+                "input": {
+                    "id": 2, 
+                    "output_name": "filtered_output"
+                }, 
+                "select_reference|reference": {
+                    "id": 0, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": "bealign", 
+            "name": "testtoolshed.g2.bx.psu.edu/repos/rdvelazquez/bioext_bealign/bioext_bealign/0.18.6.0", 
+            "outputs": [], 
+            "position": {
+                "left": 890, 
+                "top": 546
+            }, 
+            "post_job_actions": {
+                "HideDatasetActiondiscarded_reads": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "discarded_reads"
+                }, 
+                "HideDatasetActionoutput": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output"
+                }
+            }, 
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/rdvelazquez/bioext_bealign/bioext_bealign/0.18.6.0", 
+            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"advanced\": {\"reverse_complement\": \"false\", \"alphabet\": \"codon\", \"expected_identity\": \"\", \"score_matrix\": \"BLOSUM62\", \"discard\": \"false\", \"keep_reference\": \"false\"}, \"select_reference\": {\"reference_type\": \"dataset\", \"__current_case__\": 1, \"reference\": {\"__class__\": \"RuntimeValue\"}}, \"input\": {\"__class__\": \"RuntimeValue\"}}", 
+            "tool_version": "0.18.6.0", 
+            "type": "tool", 
+            "uuid": "1af66d8e-a65a-4e93-a67d-c4de34fd26b0", 
+            "workflow_outputs": []
+        }, 
+        "5": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/rnateam/mafft/rbc_mafft/7.221.3", 
+            "errors": "Tool is not installed.", 
+            "id": 5, 
+            "input_connections": {
+                "inputSequences": {
+                    "id": 3, 
+                    "output_name": "contigs"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "toolshed.g2.bx.psu.edu/repos/rnateam/mafft/rbc_mafft/7.221.3", 
+            "outputs": [], 
+            "position": {
+                "left": 1436, 
+                "top": 293
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionoutputTree": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "outputTree"
+                }
+            }, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/rnateam/mafft/rbc_mafft/7.221.3", 
+            "tool_state": "{\"__page__\": null, \"outputFormat\": \"\", \"getTree\": \"false\", \"inputSequences\": {\"__class__\": \"RuntimeValue\"}, \"datatype\": \"\", \"__rerun_remap_job_id__\": null, \"matrix_condition\": {\"matrix\": \"\", \"__current_case__\": 0}, \"ep\": \"0.123\", \"adjustdirection\": \" \", \"cond_flavour\": {\"flavourType\": \"mafft-fftns\", \"__current_case__\": 0}, \"reorder\": \"false\", \"op\": \"1.53\"}", 
+            "tool_version": "7.221.3", 
+            "type": "tool", 
+            "uuid": "a1ab660b-f370-47d3-a4cd-a23e66b26056", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "outputAlignment", 
+                    "uuid": "c4a39c35-e40a-4f98-a3e4-d69200c85811"
+                }
+            ]
+        }, 
+        "6": {
+            "annotation": "", 
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/rdvelazquez/bioext_bealign/bioext_bealign/0.18.6.0", 
+            "errors": "Tool is not installed.", 
+            "id": 6, 
+            "input_connections": {
+                "input": {
+                    "id": 3, 
+                    "output_name": "contigs"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "testtoolshed.g2.bx.psu.edu/repos/rdvelazquez/bioext_bealign/bioext_bealign/0.18.6.0", 
+            "outputs": [], 
+            "position": {
+                "left": 1431.5, 
+                "top": 466
+            }, 
+            "post_job_actions": {
+                "HideDatasetActiondiscarded_reads": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "discarded_reads"
+                }, 
+                "HideDatasetActionoutput": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output"
+                }
+            }, 
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/rdvelazquez/bioext_bealign/bioext_bealign/0.18.6.0", 
+            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"advanced\": {\"reverse_complement\": \"false\", \"alphabet\": \"codon\", \"expected_identity\": \"\", \"score_matrix\": \"BLOSUM62\", \"discard\": \"false\", \"keep_reference\": \"false\"}, \"select_reference\": {\"reference_type\": \"preset\", \"__current_case__\": 0, \"reference\": \"HXB2_tat\"}, \"input\": {\"__class__\": \"RuntimeValue\"}}", 
+            "tool_version": "0.18.6.0", 
+            "type": "tool", 
+            "uuid": "b8af37bc-ef7f-41ef-88ba-696bf345e02d", 
+            "workflow_outputs": []
+        }, 
+        "7": {
+            "annotation": "", 
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/stephenshank/shorah_amplicon/shorah_amplicon/1.1.3+galaxy0", 
+            "errors": "Tool is not installed.", 
+            "id": 7, 
+            "input_connections": {
+                "bam": {
+                    "id": 4, 
+                    "output_name": "output"
+                }, 
+                "fasta": {
+                    "id": 0, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": "Shorah", 
+            "name": "testtoolshed.g2.bx.psu.edu/repos/stephenshank/shorah_amplicon/shorah_amplicon/1.1.3+galaxy0", 
+            "outputs": [], 
+            "position": {
+                "left": 1161, 
+                "top": 464
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/stephenshank/shorah_amplicon/shorah_amplicon/1.1.3+galaxy0", 
+            "tool_state": "{\"__page__\": null, \"diversity\": \"false\", \"min_overlap\": \"0.95\", \"__rerun_remap_job_id__\": null, \"maxcov\": \"50000\", \"alpha\": \"0.5\", \"fasta\": {\"__class__\": \"RuntimeValue\"}, \"bam\": {\"__class__\": \"RuntimeValue\"}, \"sigma\": \"0.01\", \"region\": \"\"}", 
+            "tool_version": "1.1.3+galaxy0", 
+            "type": "tool", 
+            "uuid": "534ae2f5-a1e3-4813-a198-ce9f72c7eae0", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "haplotypes", 
+                    "uuid": "c8264674-fdf7-4be1-b7ad-85ab134c9e81"
+                }, 
+                {
+                    "label": null, 
+                    "output_name": "log", 
+                    "uuid": "63751c55-7729-408c-8630-96783115215b"
+                }
+            ]
+        }, 
+        "8": {
+            "annotation": "", 
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/rdvelazquez/bioext_bam2msa/bioext_bam2msa/0.18.6.0", 
+            "errors": "Tool is not installed.", 
+            "id": 8, 
+            "input_connections": {
+                "input": {
+                    "id": 4, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "testtoolshed.g2.bx.psu.edu/repos/rdvelazquez/bioext_bam2msa/bioext_bam2msa/0.18.6.0", 
+            "outputs": [], 
+            "position": {
+                "left": 1115, 
+                "top": 650
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionoutput": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output"
+                }
+            }, 
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/rdvelazquez/bioext_bam2msa/bioext_bam2msa/0.18.6.0", 
+            "tool_state": "{\"region_end\": \"0\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"region_start\": \"0\", \"input\": {\"__class__\": \"RuntimeValue\"}}", 
+            "tool_version": "0.18.6.0", 
+            "type": "tool", 
+            "uuid": "bde7ccc5-b9e1-457d-8e45-12eff303a129", 
+            "workflow_outputs": []
+        }, 
+        "9": {
+            "annotation": "", 
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/rdvelazquez/bioext_bam2msa/bioext_bam2msa/0.18.6.0", 
+            "errors": "Tool is not installed.", 
+            "id": 9, 
+            "input_connections": {
+                "input": {
+                    "id": 6, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "testtoolshed.g2.bx.psu.edu/repos/rdvelazquez/bioext_bam2msa/bioext_bam2msa/0.18.6.0", 
+            "outputs": [], 
+            "position": {
+                "left": 1635, 
+                "top": 477
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/rdvelazquez/bioext_bam2msa/bioext_bam2msa/0.18.6.0", 
+            "tool_state": "{\"region_end\": \"0\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"region_start\": \"0\", \"input\": {\"__class__\": \"RuntimeValue\"}}", 
+            "tool_version": "0.18.6.0", 
+            "type": "tool", 
+            "uuid": "9851d469-592c-4668-b240-cd0d9f103577", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "output", 
+                    "uuid": "11c1c98b-43c2-4df8-ab9a-da191bc39cff"
+                }
+            ]
+        }, 
+        "10": {
+            "annotation": "", 
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/veg/mmvc/mmvc/1.0.2", 
+            "errors": "Tool is not installed.", 
+            "id": 10, 
+            "input_connections": {
+                "input_fasta": {
+                    "id": 8, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "testtoolshed.g2.bx.psu.edu/repos/veg/mmvc/mmvc/1.0.2", 
+            "outputs": [], 
+            "position": {
+                "left": 1321, 
+                "top": 645.5
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/veg/mmvc/mmvc/1.0.2", 
+            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"options\": {\"__current_case__\": 0, \"advanced\": \"defaults\"}, \"input_fasta\": {\"__class__\": \"RuntimeValue\"}}", 
+            "tool_version": "1.0.2", 
+            "type": "tool", 
+            "uuid": "bb07d32f-1457-48bb-9126-1b834f81e4f5", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "json_report", 
+                    "uuid": "b0d14ac0-4c72-4f6c-a40d-31b1e456d184"
+                }, 
+                {
+                    "label": null, 
+                    "output_name": "filter_msa", 
+                    "uuid": "3e16ed55-74c2-4135-a67b-71e35a062cd1"
+                }
+            ]
+        }
+    }, 
+    "tags": [], 
+    "uuid": "e49ebbd0-0206-4c69-bb70-e9212e90ee45", 
+    "version": 3
+}
