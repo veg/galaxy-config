@@ -7,7 +7,9 @@ The instructions below were tested on silverback as a newly created user "galaxy
 `cd galaxy`  
 `git checkout <desired release branch>` in this case “release_18.09”    
 `cp <location of desired galaxy.yml> ./config/galaxy.yml`  
+`cp <location of desired job_conf.xml> ./config/job_conf.xml`  
 `cp <location of desired welcome.html> ./static/welcome.html`  
+`cp <location of desired job_conf.xml> ./config/job_conf.xml`  
 Uncomment the test tool shed in `./config/tool_sheds_conf.xml`  
 
 ### Setup Database
@@ -30,8 +32,9 @@ The `tool_list.yml` file can be generated using the ephemeris `get-tool-list` co
 
 
 ### Add Workflows
-The ephemeris command (`workflow-install`) wasn't working but they are easy to just upload by hand as long as you have the *.ga files (saved in the `workflows\` directory of this repo.
+The ephemeris command (`workflow-install`) wasn't working but they are easy to just upload by hand as long as you have the *.ga files (saved in the `workflows\` directory of this repo).
 
 ## TODO:
 
 ### Connect to Cluster (with torque)
+Will involve the `job_conf.xml` file.
