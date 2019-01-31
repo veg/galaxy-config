@@ -1002,7 +1002,7 @@ galaxy:
   # use_interactive.  It also causes the files used by PBS/SGE
   # (submission script, output, and error) to remain on disk after the
   # job is complete.
-  #debug: false
+  debug: false
 
   # Check for WSGI compliance.
   #use_lint: false
@@ -1015,7 +1015,7 @@ galaxy:
 
   # Enable live debugging in your browser.  This should NEVER be enabled
   # on a public site.  Enabled in the sample config for development.
-  #use_interactive: true
+  use_interactive: false
 
   # When stopping Galaxy cleanly, how much time to give various
   # monitoring/polling threads to finish before giving up on joining
