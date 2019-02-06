@@ -16,7 +16,6 @@ The instructions below were tested on silverback as a newly created user "galaxy
 `cp <location of desired galaxy.yml> ./config/galaxy.yml`  
 `cp <location of desired job_conf.xml> ./config/job_conf.xml`  
 `cp <location of desired welcome.html> ./static/welcome.html`  
-`cp <location of desired job_conf.xml> ./config/job_conf.xml`  
 Uncomment the test tool shed in `./config/tool_sheds_conf.xml`  
 
 ### 2. Setup Database
@@ -33,6 +32,7 @@ __Modify the Config File:__
 The line in the `config/galaxy.yml` file that lists `database_connection` should be: `database_connection: postgresql:///galaxydev?host=/var/run/postgresql` (again "galaxydev" in this example would be just "galaxy" in production).
 
 ### 3. Add Tools (use [Ephemeris](https://ephemeris.readthedocs.io/en/latest/index.html))
+Note: you may need to copy the correct section tags from `integrated_tool_panel.xml` before installing tools to ensure that the tools go to the correct sections in the tool pane.
 `shed-tools install -g http://dev.galaxy.hyphy.org -u <userEmail> -p <password> -a <apiKey> -t <location of tool_list.yml>`
 
 The `tool_list.yml` file can be generated using the ephemeris `get-tool-list` command
