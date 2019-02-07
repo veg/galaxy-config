@@ -43,7 +43,7 @@ The ephemeris command (`workflow-install`) wasn't working but they are easy to j
 
 
 ### 5. Connect to Cluster (with torque)
-Following the instructinos in the galaxy docs: https://docs.galaxyproject.org/en/latest/admin/cluster.htmlhttps://docs.galaxyproject.org/en/latest/admin/cluster.htmlhttps://docs.galaxyproject.org/en/latest/admin/cluster.html
+Following the instructinos in the galaxy docs: https://docs.galaxyproject.org/en/latest/admin/cluster.html
 
 The `job_conf.xml` file specifies configuration options specific to torque (this file was coppied in step 1).  
 As described in the docs, connecting galaxy to torque requires pbs_python which should be installed like so:
