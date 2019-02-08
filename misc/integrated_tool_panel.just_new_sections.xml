@@ -1,0 +1,17 @@
+    <section id="hiv_ngs_tools" name="HIV NGS Tools" version="">
+    </section>
+
+    <section id="phylogeny_reconstruction" name="Phylogeny reconstruction" version="">
+    </section>
+
+    <section id="multiple_sequence_alignment" name="Multiple sequence alignment" version="">
+    </section>
+
+    <section id="hyphy" name="HyPhy" version="">
+    </section>
+
+    <section id="simulations" name="Simulations" version="">
+    </section>
+
+    <section id="haplotype_reconstruction" name="Haplotype reconstruction" version="">
+    </section>
