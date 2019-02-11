@@ -3,7 +3,9 @@
     <param id="invalidjobexception_state">ok</param><param id="invalidjobexception_retries">0</param>
     <param id="internalexception_state">ok</param><param id="internalexception_retries">0</param></plugins>
   <destinations default="pbs">
-    <destination id="pbs" runner="pbs" tags="batch"/>
+    <destination id="pbs" runner="pbs" tags="batch">
+      <param id="Resource_List">walltime=72:00:00,nodes=1:ppn=2</param>
+    </destination>
     <limits><limit type="registered_user_concurrent_jobs">2</limit><limit type="anonymous_user_concurrent_jobs">1</limit>
       <limit type="destination_user_concurrent_jobs" id="local">1</limit>
       <limit type="destination_user_concurrent_jobs" tag="mycluster">2</limit><limit type="destination_user_concurrent_jobs" tag="longjobs">1</limit>
