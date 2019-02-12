@@ -1,16 +1,41 @@
 <?xml version="1.0"?>
-<job_conf><plugins workers="4"><plugin id="pbs" type="runner" load="galaxy.jobs.runners.pbs:PBSJobRunner" workers="16"/>
-    <param id="invalidjobexception_state">ok</param><param id="invalidjobexception_retries">0</param>
-    <param id="internalexception_state">ok</param><param id="internalexception_retries">0</param></plugins>
+<job_conf>
+  <plugins workers="4">
+    <plugin id="pbs" type="runner" load="galaxy.jobs.runners.pbs:PBSJobRunner" workers="16"/>
+      <param id="invalidjobexception_state">ok</param>
+      <param id="invalidjobexception_retries">0</param>
+      <param id="internalexception_state">ok</param>
+      <param id="internalexception_retries">0</param>
+    </plugins>
   <destinations default="pbs">
     <destination id="pbs" runner="pbs" tags="batch">
-      <param id="Resource_List">walltime=72:00:00,nodes=1:ppn=2</param>
+      <param id="Resource_List">walltime=72:00:00,nodes=1:ppn=1</param>
     </destination>
-    <limits><limit type="registered_user_concurrent_jobs">2</limit><limit type="anonymous_user_concurrent_jobs">1</limit>
-      <limit type="destination_user_concurrent_jobs" id="local">1</limit>
-      <limit type="destination_user_concurrent_jobs" tag="mycluster">2</limit><limit type="destination_user_concurrent_jobs" tag="longjobs">1</limit>
-      <limit type="destination_total_concurrent_jobs" id="local">16</limit><limit type="destination_total_concurrent_jobs" tag="longjobs">100</limit>
-      <limit type="walltime">24:00:00</limit><limit type="total_walltime" window="30">24:00:00</limit>
-      <limit type="output_size">10GB</limit></limits>
+    <destination id="pbs_small" runner="pbs" tags="batch">
+      <param id="Resource_List">walltime=72:00:00,nodes=1:ppn=8</param>
+    </destination>
+    <destination id="pbs_medium" runner="pbs" tags="batch">
+      <param id="Resource_List">walltime=72:00:00,nodes=1:ppn=16</param>
+    </destination>
+    <limits>
+      <limit type="registered_user_concurrent_jobs">10</limit>
+      <limit type="anonymous_user_concurrent_jobs">1</limit>
+      <limit type="walltime">72:00:00</limit>
+      <limit type="output_size">10GB</limit>
+    </limits>
   </destinations>
+  <tools>
+    <tool id="hyphy_fubar" destination="pbs_medium" />
+    <tool id="hyphy_gard" destination="pbs_medium" />
+    <tool id="hyphy_absrel" destination="pbs_small" />
+    <tool id="hyphy_bgm" destination="pbs_small" />
+    <tool id="hyphy_busted" destination="pbs_small" />
+    <tool id="hyphy_fade" destination="pbs_small" />
+    <tool id="hyphy_fel" destination="pbs_small" />
+    <tool id="hyphy_meme" destination="pbs_small" />
+    <tool id="hyphy_relax" destination="pbs_small" />
+    <tool id="hyphy_slac" destination="pbs_small" />
+    <tool id="tn93" destination="pbs_small" />
+    <tool id="bioext_bealign" destination="pbs_small" />
+  </tools>
 </job_conf>
