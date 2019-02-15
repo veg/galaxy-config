@@ -1,169 +1,169 @@
 tools:
-- name: qfilt
-  owner: iuc
+- name: trimmomatic
+  owner: pjbriggs
   revisions:
-  - 94e7fce14cfd
-  tool_panel_section_id: hiv_ngs_tools
+  - 51b771646466
   tool_panel_section_label: HIV NGS Tools
-  tool_shed_url: testtoolshed.g2.bx.psu.edu
-- name: bioext_bealign
-  owner: iuc
+  tool_shed_url: toolshed.g2.bx.psu.edu
+- name: tn93
+  owner: veg
   revisions:
-  - 2064a7540ecd
-  tool_panel_section_id: hiv_ngs_tools
-  tool_panel_section_label: HIV NGS Tools
-  tool_shed_url: testtoolshed.g2.bx.psu.edu
-- name: bioext_bam2msa
-  owner: iuc
-  revisions:
-  - cf735919c2de
-  tool_panel_section_id: hiv_ngs_tools
+  - 7cb6d7eb557d
   tool_panel_section_label: HIV NGS Tools
   tool_shed_url: testtoolshed.g2.bx.psu.edu
 - name: mmvc
   owner: veg
   revisions:
   - a3f7993dca52
-  tool_panel_section_id: hiv_ngs_tools
   tool_panel_section_label: HIV NGS Tools
   tool_shed_url: testtoolshed.g2.bx.psu.edu
-- name: tn93
-  owner: veg
+- name: bioext_bam2msa
+  owner: iuc
   revisions:
-  - 7cb6d7eb557d
-  tool_panel_section_id: hiv_ngs_tools
+  - cf735919c2de
   tool_panel_section_label: HIV NGS Tools
   tool_shed_url: testtoolshed.g2.bx.psu.edu
-- name: trimmomatic
-  owner: pjbriggs
+- name: bioext_bealign
+  owner: iuc
   revisions:
-  - 51b771646466
-  tool_panel_section_id: hiv_ngs_tools
+  - 2064a7540ecd
   tool_panel_section_label: HIV NGS Tools
-  tool_shed_url: toolshed.g2.bx.psu.edu
-- name: art
-  owner: iuc
-  revisions:
-  - 531ff1d417b6
-  tool_panel_section_id: simulations
-  tool_panel_section_label: Simulations
-  tool_shed_url: toolshed.g2.bx.psu.edu
-- name: hyphy_absrel
-  owner: iuc
-  revisions:
-  - 36204a7de762
-  tool_panel_section_id: hyphy
-  tool_panel_section_label: HyPhy
   tool_shed_url: testtoolshed.g2.bx.psu.edu
-- name: hyphy_fel
-  owner: stephenshank
-  revisions:
-  - bb04851a0da1
-  tool_panel_section_id: hyphy
-  tool_panel_section_label: HyPhy
-  tool_shed_url: testtoolshed.g2.bx.psu.edu
-- name: hyphy_busted
+- name: qfilt
   owner: iuc
   revisions:
-  - 3e7799d80897
-  tool_panel_section_id: hyphy
-  tool_panel_section_label: HyPhy
+  - 94e7fce14cfd
+  tool_panel_section_label: HIV NGS Tools
   tool_shed_url: testtoolshed.g2.bx.psu.edu
-- name: hyphy_slac
-  owner: stephenshank
+- name: beast
+  owner: malex
   revisions:
-  - c5f1257ff9f5
-  tool_panel_section_id: hyphy
-  tool_panel_section_label: HyPhy
-  tool_shed_url: testtoolshed.g2.bx.psu.edu
-- name: hyphy_meme
-  owner: stephenshank
-  revisions:
-  - e44501a5cdcc
-  tool_panel_section_id: hyphy
-  tool_panel_section_label: HyPhy
-  tool_shed_url: testtoolshed.g2.bx.psu.edu
-- name: hyphy_fubar
-  owner: iuc
-  revisions:
-  - 0943d89b7a25
-  tool_panel_section_id: hyphy
-  tool_panel_section_label: HyPhy
-  tool_shed_url: testtoolshed.g2.bx.psu.edu
-- name: diamond
-  owner: bgruening
-  revisions:
-  - 64be1ac21109
-  tool_panel_section_id: multiple_sequence_alignment
-  tool_panel_section_label: Multiple sequence alignment
-  tool_shed_url: toolshed.g2.bx.psu.edu
-- name: mafft
-  owner: rnateam
-  revisions:
-  - c5908940967d
-  tool_panel_section_id: multiple_sequence_alignment
-  tool_panel_section_label: Multiple sequence alignment
-  tool_shed_url: toolshed.g2.bx.psu.edu
-- name: muscle
-  owner: crs4
-  revisions:
-  - 533b3b2a1e66
-  tool_panel_section_id: multiple_sequence_alignment
-  tool_panel_section_label: Multiple sequence alignment
-  tool_shed_url: toolshed.g2.bx.psu.edu
-- name: hmmer3
-  owner: iuc
-  revisions:
-  - 54b6b4d0613a
-  tool_panel_section_id: multiple_sequence_alignment
-  tool_panel_section_label: Multiple sequence alignment
-  tool_shed_url: toolshed.g2.bx.psu.edu
-- name: fasttree
-  owner: iuc
-  revisions:
-  - c7e73acfa3eb
-  tool_panel_section_id: phylogeny_reconstruction
-  tool_panel_section_label: Phylogeny reconstruction
-  tool_shed_url: toolshed.g2.bx.psu.edu
-- name: phyml
-  owner: vlefort
-  revisions:
-  - 6dd988b4b760
-  tool_panel_section_id: phylogeny_reconstruction
-  tool_panel_section_label: Phylogeny reconstruction
-  tool_shed_url: toolshed.g2.bx.psu.edu
-- name: iqtree
-  owner: iuc
-  revisions:
-  - d1c340a5664b
-  tool_panel_section_id: phylogeny_reconstruction
+  - 2ca3df65222b
   tool_panel_section_label: Phylogeny reconstruction
   tool_shed_url: toolshed.g2.bx.psu.edu
 - name: raxml
   owner: iuc
   revisions:
   - ba29b5e2a4be
-  tool_panel_section_id: phylogeny_reconstruction
   tool_panel_section_label: Phylogeny reconstruction
   tool_shed_url: toolshed.g2.bx.psu.edu
-- name: beast
-  owner: malex
+- name: iqtree
+  owner: iuc
   revisions:
-  - 2ca3df65222b
-  tool_panel_section_id: phylogeny_reconstruction
+  - d1c340a5664b
   tool_panel_section_label: Phylogeny reconstruction
   tool_shed_url: toolshed.g2.bx.psu.edu
-- name: savage
+- name: phyml
+  owner: vlefort
+  revisions:
+  - 6dd988b4b760
+  tool_panel_section_label: Phylogeny reconstruction
+  tool_shed_url: toolshed.g2.bx.psu.edu
+- name: fasttree
+  owner: iuc
+  revisions:
+  - c7e73acfa3eb
+  tool_panel_section_label: Phylogeny reconstruction
+  tool_shed_url: toolshed.g2.bx.psu.edu
+- name: hmmer3
+  owner: iuc
+  revisions:
+  - 54b6b4d0613a
+  tool_panel_section_label: Multiple sequence alignment
+  tool_shed_url: toolshed.g2.bx.psu.edu
+- name: muscle
+  owner: crs4
+  revisions:
+  - 533b3b2a1e66
+  tool_panel_section_label: Multiple sequence alignment
+  tool_shed_url: toolshed.g2.bx.psu.edu
+- name: mafft
+  owner: rnateam
+  revisions:
+  - c5908940967d
+  tool_panel_section_label: Multiple sequence alignment
+  tool_shed_url: toolshed.g2.bx.psu.edu
+- name: diamond
+  owner: bgruening
+  revisions:
+  - 64be1ac21109
+  tool_panel_section_label: Multiple sequence alignment
+  tool_shed_url: toolshed.g2.bx.psu.edu
+- name: hyphy_bgm
+  owner: stephenshank
+  revisions:
+  - d3422ecf4713
+  tool_panel_section_label: HyPhy
+  tool_shed_url: testtoolshed.g2.bx.psu.edu
+- name: hyphy_gard
+  owner: stephenshank
+  revisions:
+  - 0caaff912a55
+  tool_panel_section_label: HyPhy
+  tool_shed_url: testtoolshed.g2.bx.psu.edu
+- name: hyphy_relax
   owner: rdvelazquez
   revisions:
-  - 0e2450894b69
-  tool_panel_section_id: haplotype_reconstruction
-  tool_panel_section_label: Haplotype reconstruction
+  - 91e554a9ced6
+  tool_panel_section_label: HyPhy
   tool_shed_url: testtoolshed.g2.bx.psu.edu
+- name: hyphy_fel
+  owner: rdvelazquez
+  revisions:
+  - 0317c5b940ea
+  tool_panel_section_label: HyPhy
+  tool_shed_url: testtoolshed.g2.bx.psu.edu
+- name: hyphy_slac
+  owner: rdvelazquez
+  revisions:
+  - 3a09fd680d3c
+  tool_panel_section_label: HyPhy
+  tool_shed_url: testtoolshed.g2.bx.psu.edu
+- name: hyphy_fubar
+  owner: rdvelazquez
+  revisions:
+  - da4fd8c3ad0c
+  tool_panel_section_label: HyPhy
+  tool_shed_url: testtoolshed.g2.bx.psu.edu
+- name: hyphy_busted
+  owner: rdvelazquez
+  revisions:
+  - 0d4341fca959
+  tool_panel_section_label: HyPhy
+  tool_shed_url: testtoolshed.g2.bx.psu.edu
+- name: hyphy_absrel
+  owner: rdvelazquez
+  revisions:
+  - edf8263a39cb
+  tool_panel_section_label: HyPhy
+  tool_shed_url: testtoolshed.g2.bx.psu.edu
+- name: hyphy_meme
+  owner: rdvelazquez
+  revisions:
+  - cffd8bd6e3ec
+  tool_panel_section_label: HyPhy
+  tool_shed_url: testtoolshed.g2.bx.psu.edu
+- name: hyphy_fade
+  owner: rdvelazquez
+  revisions:
+  - a7305e34418f
+  tool_panel_section_label: HyPhy
+  tool_shed_url: testtoolshed.g2.bx.psu.edu
+- name: art
+  owner: iuc
+  revisions:
+  - 531ff1d417b6
+  tool_panel_section_label: Simulations
+  tool_shed_url: toolshed.g2.bx.psu.edu
 - name: shorah_amplicon
   owner: iuc
   revisions:
   - 0a209122ae9a
-  tool_panel_section_id: haplotype_reconstruction
+  tool_panel_section_label: Haplotype reconstruction
+  tool_shed_url: testtoolshed.g2.bx.psu.edu
+- name: savage
+  owner: rdvelazquez
+  revisions:
+  - 0e2450894b69
   tool_panel_section_label: Haplotype reconstruction
   tool_shed_url: testtoolshed.g2.bx.psu.edu
