@@ -8,14 +8,17 @@
       <param id="internalexception_retries">0</param>
     </plugins>
   <destinations default="pbs">
-    <destination id="pbs" runner="pbs" tags="batch">
+    <destination id="pbs" runner="pbs" tags="galaxy">
       <param id="Resource_List">walltime=72:00:00,nodes=1:ppn=1</param>
+      <param id="-q">galaxy</param>
     </destination>
-    <destination id="pbs_small" runner="pbs" tags="batch">
+    <destination id="pbs_small" runner="pbs" tags="galaxy">
       <param id="Resource_List">walltime=72:00:00,nodes=1:ppn=8</param>
+      <param id="-q">galaxy</param>
     </destination>
-    <destination id="pbs_medium" runner="pbs" tags="batch">
+    <destination id="pbs_medium" runner="pbs" tags="galaxy">
       <param id="Resource_List">walltime=72:00:00,nodes=1:ppn=16</param>
+      <param id="-q">galaxy</param>
     </destination>
     <limits>
       <limit type="registered_user_concurrent_jobs">10</limit>
