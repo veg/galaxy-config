@@ -240,7 +240,7 @@ galaxy:
 
   # conda channels to enable by default (https://conda.io/docs/user-
   # guide/tasks/manage-channels.html)
-  conda_ensure_channels: 'iuc,bioconda,conda-forge,defaults'
+  conda_ensure_channels: 'davebx,iuc,bioconda,conda-forge,defaults'
 
   # Set to True to instruct Galaxy to look for and install missing tool
   # dependencies before each job runs.
