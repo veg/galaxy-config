@@ -41,7 +41,12 @@
     <tool id="hyphy_meme" destination="pbs_small" />
     <tool id="hyphy_relax" destination="pbs_small" />
     <tool id="hyphy_slac" destination="pbs_small" />
-    <tool id="tn93" destination="pbs_small" />
-    <tool id="bioext_bealign" destination="pbs_small" />
+    <tool id="tn93" destination="pbs_medium" />
+    <tool id="bioext_bealign" destination="pbs_medium" />
+    <tool id="savage" destination="pbs_medium" />
+    <tool id="shorah_amplicon" destination="pbs_small" />
+    <tool id="bowtie2" destination="pbs_small" />
+    <tool id="bwa_mem" destination="pbs_small" />
+    <tool id="mmvc" destination="pbs_medium" />
   </tools>
 </job_conf>
