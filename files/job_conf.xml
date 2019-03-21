@@ -23,7 +23,7 @@
       <param id="-q">galaxy</param>
     </destination>
     <limits>
-      <limit type="registered_user_concurrent_jobs">10</limit>
+      <limit type="registered_user_concurrent_jobs">80</limit>
       <limit type="anonymous_user_concurrent_jobs">1</limit>
       <limit type="walltime">72:00:00</limit>
       <limit type="output_size">10GB</limit>
