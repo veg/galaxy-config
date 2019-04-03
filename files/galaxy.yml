@@ -1258,7 +1258,7 @@ galaxy:
   # Admin section of the server, and will have access to create users,
   # groups, roles, libraries, and more.  For more information, see:
   # https://galaxyproject.org/admin/
-  admin_users: sshank@temple.edu,sweaver@temple.edu,ryan.velazquez0001@temple.edu,tug23285@temple.edu,james@taylorlab.org,aysam.guerler@gmail.com,anton@nekrut.org,dave@bx.psu.edu,tuh21796@temple.edu
+  admin_users: sshank@temple.edu,sweaver@temple.edu,ryan.velazquez0001@temple.edu,tug23285@temple.edu,james@taylorlab.org,aysam.guerler@gmail.com,anton@nekrut.org,dave@bx.psu.edu,tuh21796@temple.edu,nickeener@gmail.com
 
   # Force everyone to log in (disable anonymous access).
   #require_login: false
